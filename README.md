@@ -242,9 +242,11 @@ optional arguments:
 ```
 
 Example invocations:
-> ./gadget.py -v 0x1b67 -p 0x400c -f uac1
-> ./gadget.py -v 0x1b67 -p 0x400c -f uac1 -d write
-> ./gadget.py -v 0x18d1 -p 0x4e23 -f rndis
+```
+./gadget.py -v 0x1b67 -p 0x400c -f uac1
+./gadget.py -v 0x1b67 -p 0x400c -f uac1 -d write
+./gadget.py -v 0x18d1 -p 0x4e23 -f rndis
+```
 
 ## Final notes
 
