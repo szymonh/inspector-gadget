@@ -101,8 +101,7 @@ def parse_args() -> argparse.Namespace:
 
     '''
     parser = argparse.ArgumentParser(
-        description='Sample exploit for RNDIS gadget class',
-        epilog='enable usb tethering and find your device with lsubs'
+        description='Sample exploit for RNDIS gadget class'
     )
 
     parser.add_argument('-v', '--vid',  type=auto_int, required=True,
