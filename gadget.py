@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 #
+# CVE-2021-39685
+#
 # This sample script attempts to exploit lack
 # of control transfer request wLength limiting
 # by Linux kernel's USB gadget subsystem.
@@ -90,8 +92,10 @@ CTRL_REQ_MAP = {
 
 def auto_int(val: str) -> int:
     '''Convert arbitrary string to integer
+
     Used as argparse type to automatically handle input with
     different base - decimal, octal, hex etc.
+
     '''
     return int(val, 0)
 
@@ -178,10 +182,7 @@ def present_response(args: argparse.Namespace, data) -> None:
 
 
 def exploit(args: argparse.Namespace) -> None:
-    '''Attempt exploit the RNDIS device
-
-    Exercise the control transfer request handler for
-    USB_CDC_SEND_ENCAPSULATED_COMMAND command.
+    '''Exploit the Gadget
 
     '''
     usbdev = setup_device(args)

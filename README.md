@@ -216,6 +216,10 @@ Limit the transfer phase size to min(len, buffer_size) in affected control reque
 - 09.12.2021 - draft patch provided by Kernel security team
 - 12.12.2021 - fix merged to main Linux kernel tree (public)
 
+## CVE
+
+[CVE-2021-39685](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-39685)
+
 ## Exploit
 
 The gadget.py script requires pyusb. You can install this package via pip as below.
@@ -250,5 +254,5 @@ Example invocations:
 
 ## Final notes
 
-Please update your kernel.
+Please update your kernel to the latest stable version.
 
