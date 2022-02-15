@@ -252,6 +252,11 @@ Example invocations:
 ./gadget.py -v 0x18d1 -p 0x4e23 -f rndis
 ```
 
+## Patches
+
+- [USB: gadget: detect too-big endpoint 0 requests](https://github.com/torvalds/linux/commit/153a2d7e3350cc89d406ba2d35be8793a64c2038)
+- [USB: gadget: bRequestType is a bitfield, not a enum](https://github.com/torvalds/linux/commit/f08adf5add9a071160c68bb2a61d697f39ab0758)
+
 ## Final notes
 
 Please update your kernel to the latest stable version.
