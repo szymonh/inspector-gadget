@@ -222,6 +222,8 @@ Limit the transfer phase size to min(len, buffer_size) in affected control reque
 
 ## Exploit
 
+Issuing control transfer requests with wLength greater than the standard 4096 bytes requires the host to use a custom build of libusb with MAX_CTRL_BUFFER_LENGTH increased to 0xffff. This value can be altered in libusb/os/linux_usbfs.h prior to build.
+
 The gadget.py script requires pyusb. You can install this package via pip as below.
 
 > python3 -m pip install pyusb
